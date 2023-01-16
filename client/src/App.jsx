@@ -9,7 +9,7 @@ import 'stream-chat-react/dist/css/index.css';
 import './App.css';
 
 const cookies = new Cookies();
-const apiKey = 'vrgfkwzh9wz3';
+const apiKey = "vrgfkwzh9wz3";
 const authToken = cookies.get("token");
 const client = StreamChat.getInstance(apiKey);
 
@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div className = "app__wrapper">
-        <Chat client = {client} theme = "team light">
+        <Chat client = {client} theme = "team dark">
             <ChannelListContainer 
                   isCreating={isCreating}
                   setIsCreating={setIsCreating}

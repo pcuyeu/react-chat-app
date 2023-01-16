@@ -13,7 +13,7 @@ const ListContainer = ({ children }) => {
             {children}
         </div>
     )
-}
+}   
 const UserItem = ({ user, setSelectedUsers }) => {
     const [selected, setSelected] = useState(false);
 
@@ -45,7 +45,7 @@ const UserList = ({ setSelectedUsers }) => {
     // Creating a new state
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [ListEmpty, setListEmpty] = useState(false);
+    const [listEmpty, setListEmpty] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(() => {
@@ -89,7 +89,7 @@ const UserList = ({ setSelectedUsers }) => {
         )
     }
     
-    if(ListEmpty) {
+    if(listEmpty) {
         return (
             <ListContainer>
                 <div className='user-list__message'>

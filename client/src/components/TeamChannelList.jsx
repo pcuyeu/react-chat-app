@@ -9,7 +9,7 @@ const TeamChannelList = ({ children, error = false, loading, type, isCreating, s
                 Connection error, please wait a moment and try again.
             </p>
         </div>
-    ) : null;
+    ) : null
   }
 
   if(loading) {

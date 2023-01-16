@@ -28,12 +28,13 @@ const [isSignup, setIsSignup] = useState(true);
 
         const {username, password, phoneNumber, avatarURL} = form;
 
+        // For testing locally, should be http only (not https)
         const URL = 'http://localhost:5000/auth'
 
         // POST request (for both pages) will talk to the backend to return some data. Data 
         // will be store into the cookie.
         const { data: {token, userId, hashedPassword, fullName} } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`,{
-            username, password, fullName: form.fullName, phoneNumber, avatarURL
+            username, password, fullName: form.fullName, phoneNumber, avatarURL,
         });
 
         cookies.set('token', token);
