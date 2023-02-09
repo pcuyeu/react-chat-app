@@ -29,7 +29,7 @@ const [isSignup, setIsSignup] = useState(true);
         const {username, password, phoneNumber, avatarURL} = form;
 
         // For testing locally, should be http only (not https)
-        const URL = 'http://localhost:5000/auth'
+        const URL = 'https://chatting-application.herokuapp.com/auth'
 
         // POST request (for both pages) will talk to the backend to return some data. Data 
         // will be store into the cookie.
