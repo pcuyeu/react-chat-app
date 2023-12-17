@@ -10,7 +10,7 @@ import { initialState } from 'stream-chat-react/dist/components/Channel/channelS
 const cookies = new Cookies();
 
 /*
-The function below will be the sidebar that holds all of our channels.
+The SideBar component below holds all of our channels on the lefthand side of our dashboard.
 */
 
 const SideBar = ({ logout }) => (
